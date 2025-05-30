@@ -13,3 +13,6 @@ class Category extends Model
         return $this->hasMany(Subcategory::class);
     }
 }
+
+$category = Category::with('subcategories')->find(1);
+$subcategories = $category->subcategories;
