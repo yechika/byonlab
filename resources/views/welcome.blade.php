@@ -15,5 +15,6 @@
     @include('footer')
     @include('modals')
     @include('toast')
+    @include('icon_wa')
 </body>
 </html>

@@ -51,6 +51,7 @@
     @include('footer')
     @include('modals')
     @include('toast')
+    @include('icon_wa')
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
