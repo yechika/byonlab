@@ -19,7 +19,7 @@
                     <p class="text-gray-500 mb-1">{{ $product->category->name ?? '-' }}</p>
                     <p class="text-orange-600 font-bold mb-2">Rp {{ number_format($product->price, 0, ',', '.') }}</p>
                     <p class="text-sm text-gray-700 dark:text-gray-300 mb-2">{{ \Illuminate\Support\Str::limit($product->description, 60) }}</p>
-                    <a href="#" class="mt-auto inline-block bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 text-center">
+                    <a href="{{ route('product.details', $product->id) }}" class="mt-auto inline-block bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 text-center">
                         {{ lang('Lihat Detail', 'View Details') }}
                     </a>
                 </div>

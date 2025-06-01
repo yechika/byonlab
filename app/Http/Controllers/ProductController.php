@@ -33,4 +33,9 @@ class ProductController extends Controller
 
         return view('products_page', compact('products', 'categories', 'subcategories'));
     }
+    public function show($id)
+    {
+        $product = \App\Models\Product::with(['category', 'subcategory'])->findOrFail($id);
+        return view('product_details', compact('product'));
+    }
 }

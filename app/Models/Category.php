@@ -15,4 +15,4 @@ class Category extends Model
 }
 
 $category = Category::with('subcategories')->find(1);
-$subcategories = $category->subcategories;
+$subcategories = $category ? $category->subcategories : collect();

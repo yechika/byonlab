@@ -13,4 +13,5 @@ Route::get('/lang/{lang}', function ($lang) {
     }
     return back();
 })->name('lang.switch');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.details');
 
