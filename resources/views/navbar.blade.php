@@ -4,7 +4,7 @@
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="{{ url('/') }}" class="flex items-center">
-                    <img src="{{ asset('storage/1000067783-removebg-preview.png') }}" alt="BYONLAB Logo" class="h-10 w-auto" style="max-height:40px;">
+                    <img src="{{ asset('storage/1000067783-removebg-preview.png') }}" alt="Biondi Logo" class="h-10 w-auto" style="max-height:40px;">
                 </a>
             </div>
 

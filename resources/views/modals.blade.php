@@ -6,7 +6,7 @@
                 </div>
                 <div class="p-4 overflow-y-auto max-h-[70vh]">
                     <p class="text-gray-800 dark:text-gray-300 mb-4">
-                        Kebijakan Privasi ini menjelaskan bagaimana Byonlab mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda ketika Anda menggunakan situs web kami.
+                        Kebijakan Privasi ini menjelaskan bagaimana Biondi mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda ketika Anda menggunakan situs web kami.
                     </p>
                     <h4 class="font-semibold text-gray-800 dark:text-white mb-2">Informasi yang Kami Kumpulkan</h4>
                     <p class="text-gray-800 dark:text-gray-300 mb-4">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="p-4 overflow-y-auto max-h-[70vh]">
                     <p class="text-gray-800 dark:text-gray-300 mb-4">
-                        Dengan mengakses dan menggunakan situs web Byonlab, Anda menerima dan setuju untuk terikat oleh Syarat dan Ketentuan ini.
+                        Dengan mengakses dan menggunakan situs web Biondi, Anda menerima dan setuju untuk terikat oleh Syarat dan Ketentuan ini.
                     </p>
                     <h4 class="font-semibold text-gray-800 dark:text-white mb-2">Penggunaan Situs Web</h4>
                     <p class="text-gray-800 dark:text-gray-300 mb-4">
@@ -46,7 +46,7 @@
                     </p>
                     <h4 class="font-semibold text-gray-800 dark:text-white mb-2">Hak Cipta</h4>
                     <p class="text-gray-800 dark:text-gray-300 mb-4">
-                        Semua konten di situs web ini, termasuk teks, grafik, logo, dan gambar, adalah milik Byonlab atau pemberi lisensinya dan dilindungi oleh undang-undang hak cipta.
+                        Semua konten di situs web ini, termasuk teks, grafik, logo, dan gambar, adalah milik Biondi atau pemberi lisensinya dan dilindungi oleh undang-undang hak cipta.
                     </p>
                     <h4 class="font-semibold text-gray-800 dark:text-white mb-2">Perubahan Ketentuan</h4>
                     <p class="text-gray-800 dark:text-gray-300">

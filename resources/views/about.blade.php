@@ -3,17 +3,17 @@
         <div class="md:flex items-center gap-12">
             <div class="md:w-1/2 mb-10 md:mb-0">
                 <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                     alt="About Byonlab" 
+                     alt="About Biondi" 
                      class="rounded-lg shadow-xl w-full">
             </div>
             <div class="md:w-1/2">
                 <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                    {{ lang('Tentang PT Byonlab', 'About PT Byonlab') }}
+                    {{ lang('Tentang PT Biondi', 'About PT Biondi') }}
                 </h2>
                 <p class="text-gray-600 dark:text-gray-300 mb-4">
                     {{ lang(
-                        'PT Byonlab merupakan distributor resmi dari Thermo Fisher Scientific untuk Kromatografi, Spektrometri Massa dan Reagen Kimia. Kami sudah melayani lebih dari 300 konsumen di seluruh Indonesia dan memberikan lebih dari 1000 instrumen analitik berkualitas tinggi.',
-                        'PT Byonlab is the official distributor of Thermo Fisher Scientific for Chromatography, Mass Spectrometry, and Chemical Reagents. We have served more than 300 customers throughout Indonesia and delivered over 1000 high-quality analytical instruments.'
+                        'PT Biondi merupakan distributor resmi dari Thermo Fisher Scientific untuk Kromatografi, Spektrometri Massa dan Reagen Kimia. Kami sudah melayani lebih dari 300 konsumen di seluruh Indonesia dan memberikan lebih dari 1000 instrumen analitik berkualitas tinggi.',
+                        'PT Biondi is the official distributor of Thermo Fisher Scientific for Chromatography, Mass Spectrometry, and Chemical Reagents. We have served more than 300 customers throughout Indonesia and delivered over 1000 high-quality analytical instruments.'
                     ) }}
                 </p>
                 <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mt-6 mb-2">

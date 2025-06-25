@@ -2,11 +2,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-                <h3 class="text-xl font-bold mb-4">BYONLAB</h3>
+                <h3 class="text-xl font-bold mb-4">Biondi</h3>
                 <p class="text-gray-400">
                     {{ lang(
-                        'PT. ByonLab adalah distributor resmi instrumen Kromatografi dan Spektrometri Massa dari Thermo Fisher Scientific.',
-                        'PT. ByonLab is the official distributor of Chromatography and Mass Spectrometry instruments from Thermo Fisher Scientific.'
+                        'PT. Biondi adalah distributor resmi instrumen Kromatografi dan Spektrometri Massa dari Thermo Fisher Scientific.',
+                        'PT. Biondi is the official distributor of Chromatography and Mass Spectrometry instruments from Thermo Fisher Scientific.'
                     ) }}
                 </p>
             </div>
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Byonlab. {{ lang('Seluruh hak cipta dilindungi.', 'All rights reserved.') }}</p>
+            <p>&copy; 2025 Biondi. {{ lang('Seluruh hak cipta dilindungi.', 'All rights reserved.') }}</p>
         </div>
     </div>
 </footer>

@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <p class="text-gray-600 dark:text-gray-300">
-                        "Kualitas instrumen dari Byonlab sangat baik dan layanan purna jualnya sangat responsif. Sangat direkomendasikan untuk laboratorium penelitian."
+                        "Kualitas instrumen dari Biondi sangat baik dan layanan purna jualnya sangat responsif. Sangat direkomendasikan untuk laboratorium penelitian."
                     </p>
                 </div>
                 
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <p class="text-gray-600 dark:text-gray-300">
-                        "Kami telah menggunakan produk Thermo Fisher dari Byonlab selama 5 tahun dan selalu puas dengan kualitas produk dan layanannya."
+                        "Kami telah menggunakan produk Thermo Fisher dari Biondi selama 5 tahun dan selalu puas dengan kualitas produk dan layanannya."
                     </p>
                 </div>
                 
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <p class="text-gray-600 dark:text-gray-300">
-                        "Tim teknis Byonlab sangat membantu dalam pemasangan dan pelatihan penggunaan instrumen. Produknya original dan bergaransi resmi."
+                        "Tim teknis Biondi sangat membantu dalam pemasangan dan pelatihan penggunaan instrumen. Produknya original dan bergaransi resmi."
                     </p>
                 </div>
             </div>
