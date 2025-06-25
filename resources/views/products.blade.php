@@ -31,7 +31,7 @@
         </div>
         @if(Route::currentRouteName() === 'landing')
         <div class="mt-8 text-center">
-            <a href="{{ route('products.page') }}" class="inline-block bg-primary text-white px-6 py-3 rounded font-semibold hover:bg-orange-600 transition">
+            <a href="{{ route('products.page') }}" class="inline-block bg-[#323232] text-white px-6 py-3 rounded font-semibold hover:bg-orange-600 transition">
                 {{ lang('Lihat Semua Produk', 'View All Products') }}
             </a>
         </div>

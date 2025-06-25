@@ -1,33 +1,33 @@
-<header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
+<header class="sticky top-0 z-50 bg-[#323232] dark:bg-[#323232] shadow-md">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="{{ url('/') }}" class="flex items-center">
-                    <img src="{{ asset('storage/logo_biondi3.png') }}" alt="Biondi Logo" class="h-10 w-auto" style="max-height:40px;">
+                    <img src="{{ asset('storage/logo_biondi.png') }}" alt="Biondi Logo" class="h-10 w-auto" style="max-height:40px;">
                 </a>
             </div>
 
             <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="{{ url('/') }}"
-                    class="px-3 py-2 font-medium {{ request()->is('/') ? 'text-primary dark:text-secondary' : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary' }}">
+                    class="px-3 py-2 font-medium {{ request()->is('/') ? 'text-[#FF4F00]' : 'text-gray-200 hover:text-[#FF4F00]' }}">
                     {{ lang('Beranda', 'Home') }}
                 </a>
                 <a href="{{ url('/products') }}"
-                    class="px-3 py-2 font-medium {{ request()->is('products') ? 'text-primary dark:text-secondary ' : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary' }}">
+                    class="px-3 py-2 font-medium {{ request()->is('products') ? 'text-[#FF4F00]' : 'text-gray-200 hover:text-[#FF4F00]' }}">
                     {{ lang('Produk', 'Products') }}
                 </a>
                 <a href="{{ url('/about_us') }}"
-                    class="px-3 py-2 font-medium {{ request()->is('about_us') ? 'text-primary dark:text-secondary ' : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary' }}">
+                    class="px-3 py-2 font-medium {{ request()->is('about_us') ? 'text-[#FF4F00]' : 'text-gray-200 hover:text-[#FF4F00]' }}">
                     {{ lang('Tentang Kami', 'About Us') }}
                 </a>
                 <a href="{{ url('/contact_us') }}"
-                    class="px-3 py-2 font-medium {{ request()->is('contact_us') ? 'text-primary dark:text-secondary ' : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary' }}">
+                    class="px-3 py-2 font-medium {{ request()->is('contact_us') ? 'text-[#FF4F00]' : 'text-gray-200 hover:text-[#FF4F00]' }}">
                     {{ lang('Kontak', 'Contact') }}
                 </a>
                 <a href="{{ url('/admin') }}"
-                    class="ml-4 px-4 py-2 rounded bg-primary text-white font-semibold hover:bg-orange-600 transition">
+                    class="ml-4 px-4 py-2 rounded bg-[#FF4F00] text-white font-semibold hover:bg-[#ff6a2b] transition">
                     {{ lang('Masuk', 'Login') }}
                 </a>
                 <div class="flex items-center space-x-4">
@@ -45,7 +45,7 @@
 
             <!-- Mobile menu button -->
             <div class="md:hidden">
-                <button type="button" class="hs-collapse-toggle inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary focus:outline-none"
+                <button type="button" class="hs-collapse-toggle inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-[#FF4F00] focus:outline-none"
                     data-hs-collapse="#mobile-menu"
                     aria-controls="mobile-menu"
                     aria-label="Toggle menu">
@@ -57,11 +57,11 @@
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hs-collapse hidden md:hidden pb-4">
             <div class="flex flex-col space-y-2">
-                <a href="{{ url('/') }}" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary px-3 py-2 font-medium">{{ lang('Beranda', 'Home') }}</a>
-                <a href="{{ url('/products') }}" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary px-3 py-2 font-medium">{{ lang('Produk', 'Products') }}</a>
-                <a href="{{ url('/about_us') }}" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary px-3 py-2 font-medium">{{ lang('Tentang Kami', 'About Us') }}</a>
-                <a href="{{ url('/contact_us') }}" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary px-3 py-2 font-medium">{{ lang('Kontak', 'Contact') }}</a>
-                <a href="{{ url('/admin') }}" class="bg-primary text-white px-3 py-2 rounded font-medium hover:bg-orange-600 transition">{{ lang('Masuk', 'Login') }}</a>
+                <a href="{{ url('/') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Beranda', 'Home') }}</a>
+                <a href="{{ url('/products') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Produk', 'Products') }}</a>
+                <a href="{{ url('/about_us') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Tentang Kami', 'About Us') }}</a>
+                <a href="{{ url('/contact_us') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Kontak', 'Contact') }}</a>
+                <a href="{{ url('/admin') }}" class="bg-[#FF4F00] text-white px-3 py-2 rounded font-medium hover:bg-[#ff6a2b] transition">{{ lang('Masuk', 'Login') }}</a>
                 <!-- Language Switcher for Mobile -->
                 <div class="flex items-center justify-center mt-4">
                     <label class="switch">
@@ -167,4 +167,12 @@
         user-select: none;
         transition: opacity .2s;
     }
+
+    /* Custom primary color overrides */
+    .bg-primary { background-color: #FF4F00 !important; }
+    .text-primary { color: #FF4F00 !important; }
+    .hover\:bg-primary:hover { background-color: #ff6a2b !important; }
+    .hover\:text-primary:hover { color: #FF4F00 !important; }
+    .dark\:bg-secondary { background-color: #323232 !important; }
+    .dark\:text-secondary { color: #FF4F00 !important; }
 </style>
