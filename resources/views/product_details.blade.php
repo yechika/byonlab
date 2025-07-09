@@ -41,7 +41,7 @@
                            class="inline-block bg-primary text-white px-6 py-2 rounded font-semibold hover:bg-orange-600 transition">
                             {{ lang('Kembali', 'Back') }}
                         </a>
-                        <a href="https://wa.me/6281234567890?text=Halo, saya tertarik dengan produk {{ urlencode($product->name) }}" 
+                        <a href="https://wa.me/6281266866862?text=Halo, saya tertarik dengan produk {{ urlencode($product->name) }}" 
                            target="_blank"
                            class="inline-block bg-green-500 text-white px-6 py-2 rounded font-semibold hover:bg-green-600 transition">
                             {{ lang('Hubungi via WhatsApp', 'Contact via WhatsApp') }}
