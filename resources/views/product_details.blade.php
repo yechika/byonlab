@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -36,6 +35,23 @@
                             {!! nl2br(e($product->description)) !!}
                         </div>
                     </div>
+
+                    @if(!empty($product->attributes) && is_array($product->attributes))
+                        <div class="mb-6">
+                            <h2 class="text-xl font-semibold mb-2">{{ lang('Atribut Produk', 'Product Attributes') }}</h2>
+                            <table class="min-w-full text-sm border border-gray-200 dark:border-gray-700 rounded">
+                                <tbody>
+                                    @foreach($product->attributes as $attr)
+                                        <tr class="border-b border-gray-100 dark:border-gray-700">
+                                            <td class="py-2 px-4 font-semibold text-gray-700 dark:text-gray-200">{{ $attr['key'] ?? '' }}</td>
+                                            <td class="py-2 px-4 text-gray-600 dark:text-gray-300">{{ $attr['value'] ?? '' }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    @endif
+
                     <div class="flex gap-4">
                         <a href="{{ url()->previous() }}" 
                            class="inline-block bg-primary text-white px-6 py-2 rounded font-semibold hover:bg-orange-600 transition">
