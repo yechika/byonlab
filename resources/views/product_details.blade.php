@@ -12,11 +12,53 @@
     <section class="py-12 bg-gray-50 dark:bg-gray-900">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 flex flex-col md:flex-row gap-8">
-                @if($product->image_url)
-                <div class="flex-shrink-0 w-full md:w-1/2 flex items-center justify-center">
-                    <img src="{{ asset('storage/' . $product->image_url) }}"
-                        alt="{{ $product->name }}"
-                        class="rounded-lg w-full h-auto object-contain shadow-lg">
+                @if(!empty($product->image_url))
+                <div class="flex-shrink-0 w-full md:w-1/2">
+                    <div x-data="{ 
+            images: {{ json_encode($product->image_url) }}, 
+            activeIndex: 0,
+            isHovering: false  // <-- 1. State baru untuk melacak hover
+         }"
+                        @mouseenter="isHovering = true" // <-- 2. Event saat kursor masuk
+                        @mouseleave="isHovering = false" // <-- 3. Event saat kursor keluar
+                        class="relative">
+
+                        <div class="w-full h-80 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center overflow-hidden">
+                            <template x-for="(image, index) in images">
+                                <img x-show="activeIndex === index"
+                                    :src="'{{ asset('storage') }}/' + image"
+                                    alt="{{ $product->name }}"
+                                    class="w-full h-full object-contain transition-opacity duration-300">
+                            </template>
+                        </div>
+
+                        <div x-show="isHovering && images.length > 1"
+                            x-transition:enter="transition ease-out duration-200"
+                            x-transition:enter-start="opacity-0"
+                            x-transition:enter-end="opacity-100"
+                            x-transition:leave="transition ease-in duration-200"
+                            x-transition:leave-start="opacity-100"
+                            x-transition:leave-end="opacity-0">
+
+                            <button @click="activeIndex = (activeIndex > 0) ? activeIndex - 1 : images.length - 1"
+                                class="absolute top-1/2 left-2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75 focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+
+                            <button @click="activeIndex = (activeIndex < images.length - 1) ? activeIndex + 1 : 0"
+                                class="absolute top-1/2 right-2 -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-75 focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+
+                            <div class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white text-sm px-2 py-1 rounded-full">
+                                <span x-text="activeIndex + 1"></span> / <span x-text="images.length"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 @endif
                 <div class="flex-1">

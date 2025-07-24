@@ -76,6 +76,7 @@ class ProductResource extends Resource
                         FileUpload::make('image_url')
                             ->label('Gambar Produk')
                             ->image()
+                            ->multiple() // tambahkan ini
                             ->directory('products/images')
                             ->maxSize(2048),
 
