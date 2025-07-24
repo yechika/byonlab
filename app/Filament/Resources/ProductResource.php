@@ -79,6 +79,10 @@ class ProductResource extends Resource
                             ->directory('products/images')
                             ->maxSize(2048),
 
+                        TextInput::make('target_link')
+                            ->label('Link Inaproc')
+                            ->url()
+                            ->maxLength(255),
                     ]),
 
                 Textarea::make('description')
