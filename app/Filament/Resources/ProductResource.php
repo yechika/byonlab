@@ -76,9 +76,14 @@ class ProductResource extends Resource
                         FileUpload::make('image_url')
                             ->label('Gambar Produk')
                             ->image()
+                            ->multiple() 
                             ->directory('products/images')
                             ->maxSize(2048),
 
+                        TextInput::make('target_link')
+                            ->label('Link Inaproc')
+                            ->url()
+                            ->maxLength(255),
                     ]),
 
                 Textarea::make('description')

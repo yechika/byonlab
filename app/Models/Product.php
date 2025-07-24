@@ -15,10 +15,12 @@ class Product extends Model
         'image_url',
         'price',
         'stock',
+        'target_link',
     ];
 
     protected $casts = [
         'attributes' => 'array',
+        'image_url' => 'array', 
     ];
 
     public function category()
