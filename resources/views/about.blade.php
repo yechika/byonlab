@@ -2,8 +2,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="md:flex items-center gap-12">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                     alt="About PT Biondi Loka Niaga" 
+                <img src="{{ asset('storage/high-angle-blue-chemical-substances-arrangement.jpg') }}" alt="About PT Biondi Loka Niaga" 
                      class="rounded-lg shadow-xl w-full">
             </div>
             <div class="md:w-1/2">
