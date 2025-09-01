@@ -5,7 +5,7 @@
                 <input type="radio" name="radio-buttons" id="img-1" checked />
                 <li class="slide-container">
                     <div class="slide-image">
-                        <img src="https://wiralabanalitika.com/wp-content/uploads/2025/05/Untitled-Instagram-Post-45-2-240x300.png" alt="Hero 1">
+                        <img src="{{ asset('storage/high-angle-blue-chemical-substances-arrangement.jpg') }}" alt="Hero 1">
                         <div class="absolute left-0 top-0 h-full flex flex-col justify-center z-10 ml-8 mr-8 md:ml-80">
                             <h1 class="text-4xl md:text-5xl font-bold mb-4">
                                 {{ lang('Distributor Resmi Thermo Fisher Scientific', 'Official Distributor of Thermo Fisher Scientific') }}
@@ -35,7 +35,7 @@
                 <input type="radio" name="radio-buttons" id="img-2" />
                 <li class="slide-container">
                     <div class="slide-image">
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Hero 2">
+                        <img src="{{ asset('storage/scientist-working-lab-side-view.jpg') }}" alt="Hero 2">
                         <div class="absolute left-0 top-0 h-full flex flex-col justify-center z-10 ml-8 mr-8 md:ml-80">
                             <h1 class="text-4xl md:text-5xl font-bold mb-4">
                                 {{ lang('Solusi Laboratorium Modern', 'Modern Laboratory Solutions') }}
@@ -65,7 +65,7 @@
                 <input type="radio" name="radio-buttons" id="img-3" />
                 <li class="slide-container">
                     <div class="slide-image">
-                        <img src="https://speakzeasy.files.wordpress.com/2015/05/twa_blogpic_timisoara-4415.jpg" alt="Hero 3">
+                        <img src="{{ asset('storage/researcher-working-laboratory.jpg') }}" alt="Hero 3">
                         <div class="absolute left-0 top-0 h-full flex flex-col justify-center z-10 ml-8 mr-8 md:ml-80">
                             <h1 class="text-4xl md:text-5xl font-bold mb-4">
                                 {{ lang('Slide Ketiga', 'Third Slide') }}
