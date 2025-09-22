@@ -7,10 +7,10 @@
                     <div class="slide-image">
                         <img src="{{ asset('storage/high-angle-blue-chemical-substances-arrangement.jpg') }}" alt="Hero 1">
                         <div class="absolute left-0 top-0 h-full flex flex-col justify-center z-10 ml-8 mr-8 md:ml-80">
-                            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-stroke">
                                 {{ lang('Distributor Resmi Thermo Fisher Scientific', 'Official Distributor of Thermo Fisher Scientific') }}
                             </h1>
-                            <p class="text-xl mb-8">
+                            <p class="text-xl mb-8 text-stroke">
                                 {{ lang('Dapatkan keyakinan dalam pengukuran Anda dengan solusi instrumen analitik yang paling andal', 'Gain confidence in your measurements with the most reliable analytical instrument solutions') }}
                             </p>
                             <div class="flex flex-col sm:flex-row gap-4 ml-0 md:ml-2">
@@ -35,12 +35,12 @@
                 <input type="radio" name="radio-buttons" id="img-2" />
                 <li class="slide-container">
                     <div class="slide-image">
-                        <img src="{{ asset('storage/scientist-working-lab-side-view.jpg') }}" alt="Hero 2">
+                        <img src="{{ asset('storage/researcher-working-laboratory.jpg') }}" alt="Hero 2">
                         <div class="absolute left-0 top-0 h-full flex flex-col justify-center z-10 ml-8 mr-8 md:ml-80">
-                            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-stroke">
                                 {{ lang('Solusi Laboratorium Modern', 'Modern Laboratory Solutions') }}
                             </h1>
-                            <p class="text-xl mb-8">
+                            <p class="text-xl mb-8 text-stroke">
                                 {{ lang('Menyediakan instrumen dan reagen terbaik untuk kebutuhan riset dan industri Anda.', 'Providing the best instruments and reagents for your research and industry needs.') }}
                             </p>
                             <div class="flex flex-col sm:flex-row gap-4 ml-0 md:ml-2">
@@ -65,12 +65,12 @@
                 <input type="radio" name="radio-buttons" id="img-3" />
                 <li class="slide-container">
                     <div class="slide-image">
-                        <img src="{{ asset('storage/researcher-working-laboratory.jpg') }}" alt="Hero 3">
+                        <img src="{{ asset('storage/scientist-working-lab-side-view.jpg') }}" alt="Hero 3">
                         <div class="absolute left-0 top-0 h-full flex flex-col justify-center z-10 ml-8 mr-8 md:ml-80">
-                            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-stroke">
                                 {{ lang('Slide Ketiga', 'Third Slide') }}
                             </h1>
-                            <p class="text-xl mb-8">
+                            <p class="text-xl mb-8 text-stroke">
                                 {{ lang('Deskripsi slide ketiga.', 'Third slide description.') }}
                             </p>
                         </div>
@@ -202,6 +202,9 @@
         }
         input:checked + .slide-container .nav label {
             display: block;
+        }
+        .text-stroke {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
     </style>
 </section>
