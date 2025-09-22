@@ -100,7 +100,7 @@
 
                         <div class="flex gap-4">
                             <a href="{{ url()->previous() }}"
-                                class="text-center inline-block bg-primary text-white px-6 py-2 rounded font-semibold hover:bg-orange-600 transition">
+                                class="inline-flex items-center justify-center bg-primary text-white px-6 py-2 rounded font-semibold hover:bg-orange-600 transition">
                                 {{ lang('Kembali', 'Back') }}
                             </a>
 
