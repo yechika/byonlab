@@ -12,7 +12,9 @@ class Category extends Model
     {
         return $this->hasMany(Subcategory::class);
     }
-}
 
-$category = Category::with('subcategories')->find(1);
-$subcategories = $category ? $category->subcategories : collect();
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+}
