@@ -18,6 +18,7 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Grid;
+use Filament\Tables\Filters\SelectFilter;
 
 class ProductResource extends Resource
 {
@@ -50,7 +51,7 @@ class ProductResource extends Resource
                         Select::make('category_id')
                             ->label('Kategori')
                             ->relationship('category', 'name')
-                            ->searchable()
+                            ->preload()
                             ->required()
                             ->createOptionForm([
                                 TextInput::make('name')
@@ -61,7 +62,6 @@ class ProductResource extends Resource
                         Select::make('subcategory_id')
                             ->label('Sub Kategori')
                             ->relationship('subcategory', 'name')
-                            ->searchable()
                             ->preload()
                             ->createOptionForm([
                                 Select::make('category_id')
@@ -76,7 +76,7 @@ class ProductResource extends Resource
                         FileUpload::make('image_url')
                             ->label('Gambar Produk')
                             ->image()
-                            ->multiple() // tambahkan ini
+                            ->multiple() 
                             ->directory('products/images')
                             ->maxSize(2048),
 
@@ -108,13 +108,22 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')->label('Nama Produk'),
-                Tables\Columns\TextColumn::make('price')->label('Harga'),
+                Tables\Columns\TextColumn::make('name')->label('Nama Produk')->searchable(),
+                Tables\Columns\TextColumn::make('price')->label('Harga')->money('IDR'),
                 Tables\Columns\TextColumn::make('stock')->label('Stok'),
-                Tables\Columns\TextColumn::make('category.name')->label('Kategori'),
+                Tables\Columns\TextColumn::make('category.name')->label('Kategori')->searchable(),
+                Tables\Columns\TextColumn::make('subcategory.name')->label('Sub Kategori')->searchable(),
             ])
             ->filters([
-                //
+                SelectFilter::make('category_id')
+                    ->label('Kategori')
+                    ->relationship('category', 'name')
+                    ->preload(),
+                
+                SelectFilter::make('subcategory_id')
+                    ->label('Sub Kategori')
+                    ->relationship('subcategory', 'name')
+                    ->preload(),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
