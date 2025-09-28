@@ -7,22 +7,12 @@
             </div>
             <div class="md:w-1/2">
                 <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                    {{ lang('Tentang PT Byonlab', 'About PT Byonlab') }}
+                    {{ lang('Tentang Byonlab', 'About Byonlab') }}
                 </h2>
                 <p class="text-gray-600 dark:text-gray-300 mb-4">
                     {{ lang(
-    'Kami adalah PT. Biondi Loka Niaga ,perusahaan
-yang bergerak di bidang Industrial E-Commers,
-yang menyediakan Peralatan Pelatihan,
-Perkakas, Peralatan Rumah Tangga, Peralatan
-Olahraga, Peralatan Elektronik, serta Alat dan
-Mesin Industri',
-    'We are PT. Biondi Loka Niaga, a company engaged
-in the Industrial E-Commerce sector, which
-provides Training Equipment, Tools, Household
-Equipment, Sports Equipment, Electronic
-Equipment, and Industrial Tools and Machines.
-'
+    'Byonlab adalah pilihan cerdas untuk komunitas ilmiah. Kami adalah penyedia terpercaya peralatan laboratorium untuk sekolah, universitas, rumah sakit, organisasi, dan masyarakat umum. Dengan kualitas terbaik, inovasi tanpa henti, dan komitmen terhadap kepuasan pelanggan, Byonlab adalah mitra Anda dalam mengeksplorasi pengetahuan dan mendorong batas-batas sains lebih jauh!',
+    'Byonlab is the smart choice for the scientific community. We\'re a trusted provider of laboratory equipment for schools, universities, hospitals, organizations, and the general public. With top-notch quality, nonstop innovation, and a commitment to customer satisfaction, Byonlab is your partner in exploring knowledge and pushing the boundaries of science even further!'
 ) }}
                 </p>
                 <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mt-6 mb-2">
@@ -30,8 +20,8 @@ Equipment, and Industrial Tools and Machines.
                 </h3>
                 <p class="text-gray-600 dark:text-gray-300 mb-4">
                     {{ lang(
-    'PT Biondi Loka Niaga melayani penjualan, servis serta garansi untuk kerusakan pabrik untuk setiap produk yang kami jual. Dan kami menjamin keaslian barang untuk setiap produk Fluke yang kami kirimkan ke setiap pelanggan kami.',
-    'PT Biondi Loka Niaga provides sales, service, and factory defect warranty for every product we sell. We guarantee the authenticity of every Fluke product delivered to our customers.'
+    'Memimpin industri pasokan laboratorium nasional dengan komitmen terhadap kualitas, inovasi, dan kepuasan pelanggan, merangkul komunitas ilmiah untuk mendorong batas-batas pengetahuan.',
+    'To lead the nation\'s laboratory supply industry with a commitment to quality, innovation, and customer satisfaction, embracing scientific communities to push the boundaries of knowledge.'
 ) }}
                 </p>
                 <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mt-6 mb-2">
@@ -40,47 +30,78 @@ Equipment, and Industrial Tools and Machines.
                 <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-6">
                     <li>
                         {{ lang(
-    'Menjadi distributor peralatan industri pilihan yang paling tepercaya, berkontribusi pada pertumbuhan dan kesuksesan industri di seluruh negeri.',
-    'To become the most trusted choice of industrial equipment distributor, contributing to the growth and success of industries nationwide.'
+    'Menghadirkan produk berkualitas tinggi yang dirancang dengan presisi dan solusi yang memungkinkan kemajuan ilmiah.',
+    'Delivering high-quality, precision-engineered products and solutions that enable scientific advancement.'
 ) }}
                     </li>
                     <li>
                         {{ lang(
-    'Menyediakan peralatan dan mesin industri terbaik untuk memenuhi kebutuhan khusus klien kami.',
-    'Providing the best industrial equipment and machinery to meet our clients\' specific needs.'
-) }}
-                    </li>
-                    <li>
-                        {{ lang(
-    'Membangun kemitraan jangka panjang dengan produsen terkemuka untuk memastikan produk berkualitas tertinggi.',
-    'Building long-term partnerships with leading manufacturers to ensure the highest quality products.'
-) }}
-                    </li>
-                    <li>
-                        {{ lang(
-    'Memberikan layanan dan dukungan pelanggan yang luar biasa untuk menjamin kesuksesan bisnis klien kami.',
-    'Delivering outstanding customer service and support to ensure our clients\' business success.'
-) }}
-                    </li>
-                    <li>
-                        {{ lang(
-    'Berkontribusi pada pengembangan industri dan mendorong pertumbuhan yang berkelanjutan.',
-    'Contributing to industrial development and driving sustainable growth.'
+    'Memberikan dukungan yang dipersonalisasi untuk membantu pelanggan kami mencapai tujuan penelitian mereka.',
+    'Providing personalized support to help our customers achieve their research objectives.'
 ) }}
                     </li>
                 </ul>
-                <div class="flex flex-wrap gap-4">
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle text-primary dark:text-secondary mr-2"></i>
-                        <span>{{ lang('Produk Asli & Bergaransi', 'Original & Warranted Products') }}</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle text-primary dark:text-secondary mr-2"></i>
-                        <span>{{ lang('Tim Teknis Berpengalaman', 'Experienced Technical Team') }}</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle text-primary dark:text-secondary mr-2"></i>
-                        <span>{{ lang('Layanan Purna Jual Terbaik', 'Excellent After-Sales Service') }}</span>
+
+                <!-- Contact Details Section -->
+                <div class="mt-8 p-6 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                        {{ lang('Informasi Kontak', 'Contact Information') }}
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Address -->
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-map-marker-alt text-primary dark:text-secondary mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">{{ lang('Alamat', 'Address') }}</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                    Jalan Meruya Utara Raya No. 36A Lt.3<br>
+                                    Kembangan, Jakarta Barat, DKI Jakarta<br>
+                                    Indonesia, 11620
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-primary dark:text-secondary mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">{{ lang('Email', 'E-Mail') }}</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                    <a href="mailto:business@byonlab.id" class="hover:text-primary dark:hover:text-secondary transition">
+                                        business@byonlab.id
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Website -->
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-globe text-primary dark:text-secondary mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">{{ lang('Website', 'Website') }}</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                    <a href="https://www.byonlab.id" target="_blank" class="hover:text-primary dark:hover:text-secondary transition">
+                                        www.byonlab.id
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Sales & After Sales -->
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-phone text-primary dark:text-secondary mt-1"></i>
+                            <div>
+                                <h4 class="font-medium text-gray-900 dark:text-white">{{ lang('Sales & After Sales', 'Sales & After Sales') }}</h4>
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                    <a href="tel:+628123488305" class="hover:text-primary dark:hover:text-secondary transition block">
+                                        +62 812 - 3488 - 305
+                                    </a>
+                                    <a href="tel:+622138776605" class="hover:text-primary dark:hover:text-secondary transition block">
+                                        +62 21 - 3877 - 6605
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

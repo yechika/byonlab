@@ -18,7 +18,7 @@
                     colors: {
                         primary: '#005288',
                         secondary: '#00A0DF',
-                        accent: '#FF6B00',
+                        accent: '#3B82F6',
                     },
                     fontFamily: {
                         sans: ['Poppins', 'sans-serif'],

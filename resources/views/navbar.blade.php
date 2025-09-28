@@ -23,7 +23,7 @@
                     {{ lang('Tentang Kami', 'About Us') }}
                 </a>
                 <a href="{{ route('articles.index') }}"
-                    class="px-3 py-2 font-medium {{ request()->is('articles*') || request()->is('article*') ? 'text-[#FF4F00]' : 'text-gray-200 hover:text-[#FF4F00]' }}">
+                    class="px-3 py-2 font-medium {{ request()->is('articles*') || request()->is('article*') ? 'text-primary dark:text-secondary' : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary' }}">
                     {{ lang('Artikel', 'Articles') }}
                 </a>
                 <a href="{{ url('/contact_us') }}"
@@ -61,12 +61,12 @@
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hs-collapse hidden md:hidden pb-4">
             <div class="flex flex-col space-y-2">
-                <a href="{{ url('/') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Beranda', 'Home') }}</a>
-                <a href="{{ url('/products') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Produk', 'Products') }}</a>
-                <a href="{{ route('articles.index') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Artikel', 'Articles') }}</a>
-                <a href="{{ url('/about_us') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Tentang Kami', 'About Us') }}</a>
-                <a href="{{ url('/contact_us') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Kontak', 'Contact') }}</a>
-                <a href="{{ url('/admin') }}" class="bg-[#FF4F00] text-white px-3 py-2 rounded font-medium hover:bg-[#ff6a2b] transition">{{ lang('Masuk', 'Login') }}</a>
+                <a href="{{ url('/') }}" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary px-3 py-2 font-medium">{{ lang('Beranda', 'Home') }}</a>
+                <a href="{{ url('/products') }}" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary px-3 py-2 font-medium">{{ lang('Produk', 'Products') }}</a>
+                <a href="{{ route('articles.index') }}" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary px-3 py-2 font-medium">{{ lang('Artikel', 'Articles') }}</a>
+                <a href="{{ url('/about_us') }}" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary px-3 py-2 font-medium">{{ lang('Tentang Kami', 'About Us') }}</a>
+                <a href="{{ url('/contact_us') }}" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary px-3 py-2 font-medium">{{ lang('Kontak', 'Contact') }}</a>
+                <a href="{{ url('/admin') }}" class="bg-primary text-white px-3 py-2 rounded font-medium hover:bg-blue-700 transition">{{ lang('Masuk', 'Login') }}</a>
                 <!-- Language Switcher for Mobile -->
                 <div class="flex items-center justify-center mt-4">
                     <label class="switch">
@@ -175,26 +175,30 @@
 
     /* Custom primary color overrides */
     .bg-primary {
-        background-color: #FF4F00 !important;
+        background-color: #005288 !important;
     }
 
     .text-primary {
-        color: #FF4F00 !important;
+        color: #005288 !important;
     }
 
     .hover\:bg-primary:hover {
-        background-color: #ff6a2b !important;
+        background-color: #003a5f !important;
     }
 
     .hover\:text-primary:hover {
-        color: #FF4F00 !important;
+        color: #005288 !important;
     }
 
     .dark\:bg-secondary {
-        background-color: #323232 !important;
+        background-color: #1f2937 !important;
     }
 
     .dark\:text-secondary {
-        color: #FF4F00 !important;
+        color: #00A0DF !important;
+    }
+
+    .dark\:hover\:text-secondary:hover {
+        color: #00A0DF !important;
     }
 </style>
