@@ -113,7 +113,8 @@
                         <div class="flex gap-4">
                             <a href="https://wa.me/6281234567890?text=Halo, saya tertarik dengan produk {{ urlencode($product->name) }}"
                                 target="_blank"
-                                class="flex-1 text-center inline-block bg-green-500 text-white px-6 py-2 rounded font-semibold hover:bg-green-600 transition">
+                                class="flex-1 text-center inline-flex items-center justify-center bg-green-500 text-white px-6 py-2 rounded font-semibold hover:bg-green-600 transition">
+                                <img src="https://images.icon-icons.com/3005/PNG/512/whatsapp_icon_188135.png" alt="WhatsApp" class="w-5 h-5 mr-2 filter brightness-0 invert">
                                 {{ lang('Hubungi via WhatsApp', 'Contact via WhatsApp') }}
                             </a>
                         </div>
@@ -121,7 +122,7 @@
                         @if(!empty($product->target_link))
                             <a href="{{ $product->target_link }}" target="_blank"
                                 class="w-full text-center inline-block bg-blue-600 text-white px-6 py-2 rounded font-semibold hover:bg-blue-700 transition">
-                                {{ lang('Lanjut ke Inaproc', 'Go to Inaproc') }}
+                                {{ lang('Lanjut ke Inaproc V6', 'Go to Inaproc V6') }}
                             </a>
                         @endif
 

@@ -10,6 +10,7 @@
     @include('stats')
     @include('products')
     @include('about')
+    @include('articles')
     <!-- @include('testimonials') -->
     @include('contact')
     @include('footer')

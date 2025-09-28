@@ -3,13 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Article;
 
 class ProductController extends Controller
 {
     public function index()
     {
         $products = Product::with(['category', 'subcategory'])->latest()->take(3)->get();
-        return view('welcome', compact('products'));
+        
+        // Get latest published articles for homepage
+        $articles = Article::published()
+            ->orderBy('published_at', 'desc')
+            ->limit(6)
+            ->get();
+            
+        return view('welcome', compact('products', 'articles'));
     }
     public function productsPage()
     {
