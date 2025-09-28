@@ -22,6 +22,10 @@
                     class="px-3 py-2 font-medium {{ request()->is('about_us') ? 'text-[#FF4F00]' : 'text-gray-200 hover:text-[#FF4F00]' }}">
                     {{ lang('Tentang Kami', 'About Us') }}
                 </a>
+                <a href="{{ route('articles.index') }}"
+                    class="px-3 py-2 font-medium {{ request()->is('articles*') || request()->is('article*') ? 'text-[#FF4F00]' : 'text-gray-200 hover:text-[#FF4F00]' }}">
+                    {{ lang('Artikel', 'Articles') }}
+                </a>
                 <a href="{{ url('/contact_us') }}"
                     class="px-3 py-2 font-medium {{ request()->is('contact_us') ? 'text-[#FF4F00]' : 'text-gray-200 hover:text-[#FF4F00]' }}">
                     {{ lang('Kontak', 'Contact') }}
@@ -36,9 +40,9 @@
                         <input type="checkbox" class="input" id="lang-switch">
                         <span class="slider"></span>
                         <img src="https://static.vecteezy.com/system/resources/previews/015/272/227/original/indonesia-3d-rounded-flag-with-transparent-background-free-png.png"
-                             alt="ID" class="flag-id" style="position:absolute;top:4px;left:4px;z-index:2;width:26px;height:26px;border-radius:50%;">
+                            alt="ID" class="flag-id" style="position:absolute;top:4px;left:4px;z-index:2;width:26px;height:26px;border-radius:50%;">
                         <img src="https://static.vecteezy.com/system/resources/previews/024/901/729/non_2x/united-kingdom-flag-circle-flag-of-uk-in-round-circle-vector.jpg"
-                             alt="UK" class="flag-uk" style="position:absolute;top:4px;right:4px;z-index:2;width:26px;height:26px;border-radius:50%;">
+                            alt="UK" class="flag-uk" style="position:absolute;top:4px;right:4px;z-index:2;width:26px;height:26px;border-radius:50%;">
                     </label>
                 </div>
             </div>
@@ -59,6 +63,7 @@
             <div class="flex flex-col space-y-2">
                 <a href="{{ url('/') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Beranda', 'Home') }}</a>
                 <a href="{{ url('/products') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Produk', 'Products') }}</a>
+                <a href="{{ route('articles.index') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Artikel', 'Articles') }}</a>
                 <a href="{{ url('/about_us') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Tentang Kami', 'About Us') }}</a>
                 <a href="{{ url('/contact_us') }}" class="text-gray-200 hover:text-[#FF4F00] px-3 py-2 font-medium">{{ lang('Kontak', 'Contact') }}</a>
                 <a href="{{ url('/admin') }}" class="bg-[#FF4F00] text-white px-3 py-2 rounded font-medium hover:bg-[#ff6a2b] transition">{{ lang('Masuk', 'Login') }}</a>
@@ -68,9 +73,9 @@
                         <input type="checkbox" class="input" id="lang-switch-mobile">
                         <span class="slider"></span>
                         <img src="https://static.vecteezy.com/system/resources/previews/015/272/227/original/indonesia-3d-rounded-flag-with-transparent-background-free-png.png"
-                             alt="ID" class="flag-id" style="position:absolute;top:4px;left:4px;z-index:2;width:26px;height:26px;border-radius:50%;">
+                            alt="ID" class="flag-id" style="position:absolute;top:4px;left:4px;z-index:2;width:26px;height:26px;border-radius:50%;">
                         <img src="https://static.vecteezy.com/system/resources/previews/024/901/729/non_2x/united-kingdom-flag-circle-flag-of-uk-in-round-circle-vector.jpg"
-                             alt="UK" class="flag-uk" style="position:absolute;top:4px;right:4px;z-index:2;width:26px;height:26px;border-radius:50%;">
+                            alt="UK" class="flag-uk" style="position:absolute;top:4px;right:4px;z-index:2;width:26px;height:26px;border-radius:50%;">
                     </label>
                 </div>
             </div>
@@ -91,10 +96,10 @@
         const langSwitch = document.getElementById('lang-switch');
         if (langSwitch) {
             langSwitch.checked = "{{ session('lang', 'id') }}" === "en";
-            langSwitch.addEventListener('change', function () {
-                window.location.href = this.checked
-                    ? "{{ route('lang.switch', 'en') }}"
-                    : "{{ route('lang.switch', 'id') }}";
+            langSwitch.addEventListener('change', function() {
+                window.location.href = this.checked ?
+                    "{{ route('lang.switch', 'en') }}" :
+                    "{{ route('lang.switch', 'id') }}";
             });
         }
 
@@ -102,10 +107,10 @@
         const langSwitchMobile = document.getElementById('lang-switch-mobile');
         if (langSwitchMobile) {
             langSwitchMobile.checked = "{{ session('lang', 'id') }}" === "en";
-            langSwitchMobile.addEventListener('change', function () {
-                window.location.href = this.checked
-                    ? "{{ route('lang.switch', 'en') }}"
-                    : "{{ route('lang.switch', 'id') }}";
+            langSwitchMobile.addEventListener('change', function() {
+                window.location.href = this.checked ?
+                    "{{ route('lang.switch', 'en') }}" :
+                    "{{ route('lang.switch', 'id') }}";
             });
         }
     });
@@ -169,10 +174,27 @@
     }
 
     /* Custom primary color overrides */
-    .bg-primary { background-color: #FF4F00 !important; }
-    .text-primary { color: #FF4F00 !important; }
-    .hover\:bg-primary:hover { background-color: #ff6a2b !important; }
-    .hover\:text-primary:hover { color: #FF4F00 !important; }
-    .dark\:bg-secondary { background-color: #323232 !important; }
-    .dark\:text-secondary { color: #FF4F00 !important; }
+    .bg-primary {
+        background-color: #FF4F00 !important;
+    }
+
+    .text-primary {
+        color: #FF4F00 !important;
+    }
+
+    .hover\:bg-primary:hover {
+        background-color: #ff6a2b !important;
+    }
+
+    .hover\:text-primary:hover {
+        color: #FF4F00 !important;
+    }
+
+    .dark\:bg-secondary {
+        background-color: #323232 !important;
+    }
+
+    .dark\:text-secondary {
+        color: #FF4F00 !important;
+    }
 </style>
