@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Article;
+use App\Models\Hero;
 
 class ProductController extends Controller
 {
@@ -17,7 +18,10 @@ class ProductController extends Controller
             ->limit(6)
             ->get();
             
-        return view('welcome', compact('products', 'articles'));
+        // Get active hero images ordered by sort_order
+        $heroes = Hero::active()->ordered()->get();
+            
+        return view('welcome', compact('products', 'articles', 'heroes'));
     }
     public function productsPage()
     {

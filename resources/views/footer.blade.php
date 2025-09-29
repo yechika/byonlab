@@ -20,12 +20,13 @@
                 </ul>
             </div> -->
             <div>
-                <h4 class="font-semibold mb-4 text-[#FF4F00]">{{ lang('Perusahaan', 'Company') }}</h4>
+                <h4 class="font-semibold mb-4 text-[#FF4F00]">{{ lang('Navigasi', 'Navigation') }}</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-300 hover:text-[#FF4F00]" onclick="event.preventDefault(); scrollToSection('about')">{{ lang('Tentang Kami', 'About Us') }}</a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-[#FF4F00]" onclick="event.preventDefault(); scrollToSection('contact')">{{ lang('Kontak', 'Contact') }}</a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-[#FF4F00]" onclick="event.preventDefault(); showPrivacyModal()">{{ lang('Kebijakan Privasi', 'Privacy Policy') }}</a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-[#FF4F00]" onclick="event.preventDefault(); showTermsModal()">{{ lang('Syarat & Ketentuan', 'Terms & Conditions') }}</a></li>
+                    <li><a href="{{ url('/') }}" class="text-gray-300 hover:text-[#FF4F00] transition-colors">{{ lang('Beranda', 'Home') }}</a></li>
+                    <li><a href="{{ url('/products') }}" class="text-gray-300 hover:text-[#FF4F00] transition-colors">{{ lang('Produk', 'Products') }}</a></li>
+                    <li><a href="{{ route('articles.index') }}" class="text-gray-300 hover:text-[#FF4F00] transition-colors">{{ lang('Artikel', 'Articles') }}</a></li>
+                    <li><a href="{{ url('/about_us') }}" class="text-gray-300 hover:text-[#FF4F00] transition-colors">{{ lang('Tentang Kami', 'About Us') }}</a></li>
+                    <li><a href="{{ url('/contact_us') }}" class="text-gray-300 hover:text-[#FF4F00] transition-colors">{{ lang('Kontak', 'Contact') }}</a></li>
                 </ul>
             </div>
             <div>

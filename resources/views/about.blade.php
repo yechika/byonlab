@@ -25,59 +25,100 @@ Equipment, and Industrial Tools and Machines.
 '
 ) }}
                 </p>
-                <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    {{ lang(
-    'PT Biondi Loka Niaga melayani penjualan, servis serta garansi untuk kerusakan pabrik untuk setiap produk yang kami jual. Dan kami menjamin keaslian barang untuk setiap produk Fluke yang kami kirimkan ke setiap pelanggan kami.',
-    'PT Biondi Loka Niaga provides sales, service, and factory defect warranty for every product we sell. We guarantee the authenticity of every Fluke product delivered to our customers.'
-) }}
-                </p>
-                <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mt-6 mb-2">
-                    {{ lang('Visi dan Misi', 'Vision and Mission') }}
-                </h3>
-                <ul class="list-disc pl-5 text-gray-600 dark:text-gray-300 mb-6">
-                    <li>
-                        {{ lang(
-    'Menjadi distributor peralatan industri pilihan yang paling tepercaya, berkontribusi pada pertumbuhan dan kesuksesan industri di seluruh negeri.',
-    'To become the most trusted choice of industrial equipment distributor, contributing to the growth and success of industries nationwide.'
-) }}
-                    </li>
-                    <li>
-                        {{ lang(
-    'Menyediakan peralatan dan mesin industri terbaik untuk memenuhi kebutuhan khusus klien kami.',
-    'Providing the best industrial equipment and machinery to meet our clients\' specific needs.'
-) }}
-                    </li>
-                    <li>
-                        {{ lang(
-    'Membangun kemitraan jangka panjang dengan produsen terkemuka untuk memastikan produk berkualitas tertinggi.',
-    'Building long-term partnerships with leading manufacturers to ensure the highest quality products.'
-) }}
-                    </li>
-                    <li>
-                        {{ lang(
-    'Memberikan layanan dan dukungan pelanggan yang luar biasa untuk menjamin kesuksesan bisnis klien kami.',
-    'Delivering outstanding customer service and support to ensure our clients\' business success.'
-) }}
-                    </li>
-                    <li>
-                        {{ lang(
-    'Berkontribusi pada pengembangan industri dan mendorong pertumbuhan yang berkelanjutan.',
-    'Contributing to industrial development and driving sustainable growth.'
-) }}
-                    </li>
-                </ul>
-                <div class="flex flex-wrap gap-4">
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle text-primary dark:text-secondary mr-2"></i>
-                        <span>{{ lang('Produk Asli & Bergaransi', 'Original & Warranted Products') }}</span>
+                <!-- Visi -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                        <i class="fas fa-eye text-[#FF4F00] mr-3"></i>
+                        {{ lang('VISI', 'VISION') }}
+                    </h3>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg border-l-4 border-[#FF4F00]">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            {{ lang(
+                                'Menjadi perusahaan industri terkemuka di Indonesia yang menyediakan solusi inovatif dan berkualitas tinggi untuk memenuhi kebutuhan pelanggan, serta memberikan kontribusi pada pertumbuhan ekonomi dan pembangunan berkelanjutan.',
+                                'To become a leading industrial company in Indonesia that provides innovative and high-quality solutions to meet customer needs, as well as contributing to economic growth and sustainable development.'
+                            ) }}
+                        </p>
                     </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle text-primary dark:text-secondary mr-2"></i>
-                        <span>{{ lang('Tim Servis Berpengalaman', 'Experienced Service Team') }}</span>
+                </div>
+
+                <!-- Misi -->
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                        <i class="fas fa-bullseye text-[#FF4F00] mr-3"></i>
+                        {{ lang('MISI', 'MISSION') }}
+                    </h3>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg border-l-4 border-[#FF4F00]">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                            {{ lang(
+                                'Menghasilkan produk berkualitas tinggi, meningkatkan efisiensi dan inovasi produk, memberikan kemudahan dan kenyamanan bagi pelanggan.',
+                                'Produce high quality products, Increase product efficiency and innovation, Provide convenience and comfort for customers.'
+                            ) }}
+                        </p>
                     </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-check-circle text-primary dark:text-secondary mr-2"></i>
-                        <span>{{ lang('Layanan Pelanggan Terbaik', 'Excellent Customer Service') }}</span>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                {{ lang('Informasi Kontak', 'Contact Information') }}
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Address -->
+                <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg text-center">
+                    <div class="w-16 h-16 bg-[#FF4F00] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                        {{ lang('Alamat', 'Address') }}
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Jl. Meruya Utara Raya No. 36A<br>
+                        Kembangan - Jakarta Barat<br>
+                        11620
+                    </p>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg text-center">
+                    <div class="w-16 h-16 bg-[#FF4F00] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                        {{ lang('Email', 'Email') }}
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        <a href="mailto:business@biondi.id" class="hover:text-[#FF4F00] transition-colors">
+                            business@biondi.id
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Phone -->
+                <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg text-center">
+                    <div class="w-16 h-16 bg-[#FF4F00] rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                        {{ lang('Telepon', 'Phone') }}
+                    </h3>
+                    <div class="text-gray-600 dark:text-gray-300 space-y-2">
+                        <p>
+                            <a href="tel:+622138776589" class="hover:text-[#FF4F00] transition-colors">
+                                +62-21-38776589
+                            </a>
+                            <br>
+                            <span class="text-sm text-gray-500">(Head Office)</span>
+                        </p>
+                        <p>
+                            <a href="tel:+6281266866862" class="hover:text-[#FF4F00] transition-colors">
+                                +62 812 6686 6862
+                            </a>
+                            <br>
+                            <span class="text-sm text-gray-500">(Sales & After Sales)</span>
+                        </p>
                     </div>
                 </div>
             </div>

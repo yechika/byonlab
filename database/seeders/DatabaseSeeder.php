@@ -21,5 +21,8 @@ class DatabaseSeeder extends Seeder
 
         // Create sample articles
         \App\Models\Article::factory(12)->create();
+
+        // Seed heroes data
+        $this->call(HeroSeeder::class);
     }
 }

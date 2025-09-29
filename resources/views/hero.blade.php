@@ -1,111 +1,75 @@
+@php use Illuminate\Support\Facades\Storage; @endphp
+@if(isset($heroes) && $heroes->count() > 0)
 <section id="home" class="hero-bg text-white py-1 md:py-1 relative overflow-hidden">
     <div>
         <div class="carousel">
             <ul class="slides">
-                <input type="radio" name="radio-buttons" id="img-1" checked />
+                @foreach($heroes as $index => $hero)
+                <input type="radio" name="radio-buttons" id="img-{{ $index + 1 }}" {{ $index == 0 ? 'checked' : '' }} />
                 <li class="slide-container">
                     <div class="slide-image">
-                        <img src="{{ asset('storage/high-angle-blue-chemical-substances-arrangement.jpg') }}" alt="Hero 1">
-                        <div class="absolute left-0 top-0 h-full flex flex-col justify-center z-10 ml-8 mr-8 md:ml-80">
-                            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-stroke">
-                                {{ lang('Distributor Resmi Thermo Fisher Scientific', 'Official Distributor of Thermo Fisher Scientific') }}
-                            </h1>
-                            <p class="text-xl mb-8 text-stroke">
-                                {{ lang('Dapatkan keyakinan dalam pengukuran Anda dengan solusi instrumen analitik yang paling andal', 'Gain confidence in your measurements with the most reliable analytical instrument solutions') }}
-                            </p>
-                            <div class="flex flex-col sm:flex-row gap-4 ml-0 md:ml-2">
-                                <a href="{{ url('/products') }}" class="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
-                                    {{ lang('Lihat Produk', 'View Products') }} <i class="fas fa-arrow-right ml-2"></i>
-                                </a>
-                                <a href="{{ url('/contact_us') }}" class="bg-transparent hover:bg-white/10 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition duration-300 flex items-center justify-center">
-                                    {{ lang('Hubungi Kami', 'Contact Us') }}
-                                </a>
-                            </div>
+                        <img src="{{ Storage::url($hero->image_url) }}" alt="{{ $hero->title ?? 'Hero Image ' . ($index + 1) }}">
+                        <!-- Hero Overlay Image -->
+                        <div class="hero-overlay-image">
+                            <img src="{{ asset('storage/logo_biondi.png') }}" alt="Hero Overlay" class="overlay-img">
                         </div>
                     </div>
                     <div class="carousel-controls">
-                        <label for="img-3" class="prev-slide">
+                        @php
+                            $prevIndex = $index == 0 ? $heroes->count() : $index;
+                            $nextIndex = $index == $heroes->count() - 1 ? 1 : $index + 2;
+                        @endphp
+                        <label for="img-{{ $prevIndex }}" class="prev-slide">
                             <span>&lsaquo;</span>
                         </label>
-                        <label for="img-2" class="next-slide">
+                        <label for="img-{{ $nextIndex }}" class="next-slide">
                             <span>&rsaquo;</span>
                         </label>
                     </div>
                 </li>
-                <input type="radio" name="radio-buttons" id="img-2" />
-                <li class="slide-container">
-                    <div class="slide-image">
-                        <img src="{{ asset('storage/researcher-working-laboratory.jpg') }}" alt="Hero 2">
-                        <div class="absolute left-0 top-0 h-full flex flex-col justify-center z-10 ml-8 mr-8 md:ml-80">
-                            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-stroke">
-                                {{ lang('Solusi Laboratorium Modern', 'Modern Laboratory Solutions') }}
-                            </h1>
-                            <p class="text-xl mb-8 text-stroke">
-                                {{ lang('Menyediakan instrumen dan reagen terbaik untuk kebutuhan riset dan industri Anda.', 'Providing the best instruments and reagents for your research and industry needs.') }}
-                            </p>
-                            <div class="flex flex-col sm:flex-row gap-4 ml-0 md:ml-2">
-                                <a href="{{ url('/products') }}" class="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
-                                    {{ lang('Jelajahi Produk', 'Explore Products') }} <i class="fas fa-arrow-right ml-2"></i>
-                                </a>
-                                <a href="{{ url('/contact_us') }}" class="bg-transparent hover:bg-white/10 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition duration-300 flex items-center justify-center">
-                                    {{ lang('Konsultasi Gratis', 'Free Consultation') }}
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-controls">
-                        <label for="img-1" class="prev-slide">
-                            <span>&lsaquo;</span>
-                        </label>
-                        <label for="img-3" class="next-slide">
-                            <span>&rsaquo;</span>
-                        </label>
-                    </div>
-                </li>
-                <input type="radio" name="radio-buttons" id="img-3" />
-                <li class="slide-container">
-                    <div class="slide-image">
-                        <img src="{{ asset('storage/scientist-working-lab-side-view.jpg') }}" alt="Hero 3">
-                        <div class="absolute left-0 top-0 h-full flex flex-col justify-center z-10 ml-8 mr-8 md:ml-80">
-                            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-stroke">
-                                {{ lang('Slide Ketiga', 'Third Slide') }}
-                            </h1>
-                            <p class="text-xl mb-8 text-stroke">
-                                {{ lang('Deskripsi slide ketiga.', 'Third slide description.') }}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="carousel-controls">
-                        <label for="img-2" class="prev-slide">
-                            <span>&lsaquo;</span>
-                        </label>
-                        <label for="img-1" class="next-slide">
-                            <span>&rsaquo;</span>
-                        </label>
-                    </div>
-                </li>
+                @endforeach
+                
                 <div class="carousel-dots">
-                    <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
-                    <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
-                    <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                    @foreach($heroes as $index => $hero)
+                    <label for="img-{{ $index + 1 }}" class="carousel-dot" id="img-dot-{{ $index + 1 }}"></label>
+                    @endforeach
                 </div>
             </ul>
         </div>
     </div>
+</section>
+@else
+<section id="home" class="hero-bg text-white py-1 md:py-1 relative overflow-hidden">
+    <div class="h-96 md:h-[600px] relative flex items-center justify-center">
+        <!-- Hero Overlay Image untuk fallback -->
+        <div class="hero-overlay-image">
+            <img src="{{ asset('storage/1000067783-removebg-preview.png') }}" alt="Hero Overlay" class="overlay-img">
+        </div>
+        <div class="text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Hero Slider</h2>
+            <p class="text-lg opacity-75">Tambahkan gambar hero melalui panel admin</p>
+        </div>
+    </div>
+</section>
+@endif
     <style>
         .carousel {
             margin-left: 0;
             margin-right: 0;
             position: relative;
+            background: #f8f9fa;
         }
         ul.slides {
             display: block;
             position: relative;
-            height: 600px;
+            height: 70vh;
+            min-height: 500px;
+            max-height: 700px;
             margin: 0;
             padding: 0;
             overflow: hidden;
             list-style: none;
+            border-radius: 0;
         }
         .slides * {
             user-select: none;
@@ -128,83 +92,246 @@
             height: 100%;
             top: 0;
             opacity: 0;
-            transition: all .7s ease-in-out;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(1.05);
         }
         .slide-image img {
-            width: auto;
-            min-width: 100%;
+            width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
+            transition: transform 0.8s ease-out;
         }
         .carousel-controls {
             position: absolute;
-            top: 0;
+            top: 50%;
+            transform: translateY(-50%);
             left: 0;
             right: 0;
             z-index: 999;
-            font-size: 100px;
-            line-height: 600px;
             color: #fff;
+            pointer-events: none;
         }
         .carousel-controls label {
-            display: none;
             position: absolute;
-            padding: 0 20px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
             opacity: 0;
-            transition: opacity .2s;
+            transition: all 0.3s ease;
             cursor: pointer;
-        }
-        .slide-image:hover + .carousel-controls label {
-            opacity: 0.5;
+            pointer-events: all;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
         }
         .carousel-controls label:hover {
-            opacity: 1;
+            opacity: 1 !important;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
         }
         .carousel-controls .prev-slide {
-            width: 49%;
-            text-align: left;
-            left: 0;
+            left: 30px;
         }
         .carousel-controls .next-slide {
-            width: 49%;
-            text-align: right;
-            right: 0;
+            right: 30px;
         }
         .carousel-dots {
             position: absolute;
             left: 0;
             right: 0;
-            bottom: 20px;
+            bottom: 30px;
             z-index: 999;
             text-align: center;
         }
         .carousel-dots .carousel-dot {
             display: inline-block;
-            width: 15px;
-            height: 15px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            background-color: #fff;
-            opacity: 0.5;
-            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.4);
+            opacity: 0.6;
+            margin: 0 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .carousel-dots .carousel-dot:hover {
+            opacity: 0.8;
+            transform: scale(1.2);
         }
         input:checked + .slide-container .slide-image {
             opacity: 1;
             transform: scale(1);
-            transition: opacity 1s ease-in-out;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        input:checked + .slide-container .slide-image img {
+            transform: scale(1.02);
         }
         input:checked + .slide-container .carousel-controls label {
-            display: block;
+            display: flex !important;
+            opacity: 0.7;
         }
-        input#img-1:checked ~ .carousel-dots label#img-dot-1,
-        input#img-2:checked ~ .carousel-dots label#img-dot-2,
-        input#img-3:checked ~ .carousel-dots label#img-dot-3 {
+        /* Responsive design */
+        @media (max-width: 768px) {
+            ul.slides {
+                height: 50vh;
+                min-height: 400px;
+            }
+            .carousel-controls label {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+            .carousel-controls .prev-slide {
+                left: 15px;
+            }
+            .carousel-controls .next-slide {
+                right: 15px;
+            }
+            .carousel-dots .carousel-dot {
+                width: 10px;
+                height: 10px;
+                margin: 0 6px;
+            }
+        }
+        /* Auto-play animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(1.05); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .slide-image.active {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        /* Hero Overlay Image Styles */
+        .hero-overlay-image {
+            position: absolute;
+            top: 50%;
+            left: 12%;
+            transform: translateY(-50%);
+            z-index: 997;
+            pointer-events: none;
+        }
+        
+        .overlay-img {
+            width: 350px;
+            height: auto;
+            max-width: 400px;
+            filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.7))
+                    drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+            transition: all 0.5s ease;
+            opacity: 0.95;
+        }
+        
+        /* Hover effect for overlay image */
+        .hero-overlay-image:hover .overlay-img {
+            transform: scale(1.03);
             opacity: 1;
         }
-        input:checked + .slide-container .nav label {
-            display: block;
+        
+        /* Responsive adjustments for overlay image */
+        @media (max-width: 1024px) {
+            .hero-overlay-image {
+                left: 10%;
+            }
+            
+            .overlay-img {
+                width: 280px;
+                max-width: 320px;
+            }
         }
-        .text-stroke {
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        
+        @media (max-width: 768px) {
+            .hero-overlay-image {
+                left: 8%;
+            }
+            
+            .overlay-img {
+                width: 200px;
+                max-width: 240px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-overlay-image {
+                left: 5%;
+            }
+            
+            .overlay-img {
+                width: 140px;
+                max-width: 160px;
+            }
         }
     </style>
-</section>
+    
+    @if(isset($heroes) && $heroes->count() > 0)
+        <style>
+            @php
+                foreach($heroes as $index => $hero) {
+                    $num = $index + 1;
+                    echo "input#img-{$num}:checked ~ .carousel-dots label#img-dot-{$num} { opacity: 1 !important; background: rgba(255, 255, 255, 0.9) !important; transform: scale(1.2) !important; }";
+                }
+            @endphp
+        </style>
+        
+        <!-- Auto-play and interaction script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const heroesCount = {{ $heroes->count() }};
+                let currentSlide = 1;
+                let autoPlayInterval;
+                const autoPlayDelay = 5000; // 5 seconds
+                
+                function nextSlide() {
+                    currentSlide = currentSlide >= heroesCount ? 1 : currentSlide + 1;
+                    document.getElementById('img-' + currentSlide).checked = true;
+                }
+                
+                function startAutoPlay() {
+                    autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+                }
+                
+                function stopAutoPlay() {
+                    clearInterval(autoPlayInterval);
+                }
+                
+                // Start auto-play
+                startAutoPlay();
+                
+                // Stop auto-play on user interaction
+                const radioButtons = document.querySelectorAll('input[name="radio-buttons"]');
+                const controlLabels = document.querySelectorAll('.carousel-controls label, .carousel-dots label');
+                
+                radioButtons.forEach(function(radio) {
+                    radio.addEventListener('change', function() {
+                        if (this.checked) {
+                            currentSlide = parseInt(this.id.replace('img-', ''));
+                            stopAutoPlay();
+                            // Restart auto-play after 10 seconds of inactivity
+                            setTimeout(startAutoPlay, 10000);
+                        }
+                    });
+                });
+                
+                controlLabels.forEach(function(label) {
+                    label.addEventListener('click', function() {
+                        stopAutoPlay();
+                        setTimeout(startAutoPlay, 10000);
+                    });
+                });
+                
+                // Pause on hover
+                const carousel = document.querySelector('.carousel');
+                if (carousel) {
+                    carousel.addEventListener('mouseenter', stopAutoPlay);
+                    carousel.addEventListener('mouseleave', startAutoPlay);
+                }
+            });
+        </script>
+    @endif
