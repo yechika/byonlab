@@ -5,25 +5,23 @@
                 <h3 class="text-xl font-bold mb-4">BYONLAB</h3>
                 <p class="text-gray-400">
                     {{ lang(
-                        'PT. ByonLab adalah distributor resmi instrumen Kromatografi dan Spektrometri Massa dari Thermo Fisher Scientific.',
-                        'PT. ByonLab is the official distributor of Chromatography and Mass Spectrometry instruments from Thermo Fisher Scientific.'
+                        'Byonlab menyediakan beragam peralatan laboratorium dalam satu platform, didukung oleh e-commerce.',
+                        'Byonlab provide a wide range of laboratory equipment in one platform, powered by e-commerce.'
                     ) }}
                 </p>
             </div>
             <div>
-                <h4 class="font-semibold mb-4">{{ lang('Produk', 'Products') }}</h4>
+                <h4 class="font-semibold mb-4">{{ lang('Navigasi', 'Navigation') }}</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white" onclick="event.preventDefault(); scrollToSection('products')">{{ lang('Kromatografi', 'Chromatography') }}</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white" onclick="event.preventDefault(); scrollToSection('products')">{{ lang('Spektrometri Massa', 'Mass Spectrometry') }}</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white" onclick="event.preventDefault(); scrollToSection('products')">{{ lang('Reagen Kimia', 'Chemical Reagents') }}</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white" onclick="event.preventDefault(); scrollToSection('products')">{{ lang('Aksesoris', 'Accessories') }}</a></li>
+                    <li><a href="{{ url('/products') }}" class="text-gray-400 hover:text-white">{{ lang('Produk', 'Products') }}</a></li>
+                    <li><a href="{{ url('/about_us') }}" class="text-gray-400 hover:text-white">{{ lang('Tentang Kami', 'About Us') }}</a></li>
+                    <li><a href="{{ route('articles.index') }}" class="text-gray-400 hover:text-white">{{ lang('Artikel', 'Articles') }}</a></li>
+                    <li><a href="{{ url('/contact_us') }}" class="text-gray-400 hover:text-white">{{ lang('Kontak', 'Contact') }}</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-semibold mb-4">{{ lang('Perusahaan', 'Company') }}</h4>
+                <h4 class="font-semibold mb-4">{{ lang('Informasi', 'Information') }}</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white" onclick="event.preventDefault(); scrollToSection('about')">{{ lang('Tentang Kami', 'About Us') }}</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white" onclick="event.preventDefault(); scrollToSection('contact')">{{ lang('Kontak', 'Contact') }}</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white" onclick="event.preventDefault(); showPrivacyModal()">{{ lang('Kebijakan Privasi', 'Privacy Policy') }}</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white" onclick="event.preventDefault(); showTermsModal()">{{ lang('Syarat & Ketentuan', 'Terms & Conditions') }}</a></li>
                 </ul>

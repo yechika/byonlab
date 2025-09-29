@@ -4,7 +4,7 @@
             <!-- Logo -->
             <div class="flex-shrink-0 flex items-center">
                 <a href="{{ url('/') }}" class="flex items-center">
-                    <img src="{{ asset('storage/1000067783-removebg-preview.png') }}" alt="BYONLAB Logo" class="h-10 w-auto" style="max-height:40px;">
+                    <img src="{{ asset('storage/logo_byonlab.png') }}" alt="BYONLAB Logo" class="h-10 w-auto" style="max-height:40px;">
                 </a>
             </div>
 
@@ -18,13 +18,13 @@
                     class="px-3 py-2 font-medium {{ request()->is('products') ? 'text-primary dark:text-secondary ' : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary' }}">
                     {{ lang('Produk', 'Products') }}
                 </a>
-                <a href="{{ url('/about_us') }}"
-                    class="px-3 py-2 font-medium {{ request()->is('about_us') ? 'text-primary dark:text-secondary ' : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary' }}">
-                    {{ lang('Tentang Kami', 'About Us') }}
-                </a>
                 <a href="{{ route('articles.index') }}"
                     class="px-3 py-2 font-medium {{ request()->is('articles*') || request()->is('article*') ? 'text-primary dark:text-secondary' : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary' }}">
                     {{ lang('Artikel', 'Articles') }}
+                </a>
+                <a href="{{ url('/about_us') }}"
+                    class="px-3 py-2 font-medium {{ request()->is('about_us') ? 'text-primary dark:text-secondary ' : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary' }}">
+                    {{ lang('Tentang Kami', 'About Us') }}
                 </a>
                 <a href="{{ url('/contact_us') }}"
                     class="px-3 py-2 font-medium {{ request()->is('contact_us') ? 'text-primary dark:text-secondary ' : 'text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-secondary' }}">

@@ -104,6 +104,16 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Recruitment Section -->
+                <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                    <p class="text-gray-700 dark:text-gray-300 text-center">
+                        {{ lang(
+                            'Kirimkan CV terbaru Anda ke: business@byonlab.id dengan subjek Sales_Your Name',
+                            'Send your latest CV to: business@byonlab.id with subject Sales_Your Name'
+                        ) }}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
