@@ -13,6 +13,7 @@
     @include('articles')
     <!-- @include('testimonials') -->
     @include('contact')
+    @include('partials.sponsors')
     @include('footer')
     @include('modals')
     @include('toast')

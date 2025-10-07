@@ -21,5 +21,8 @@ class DatabaseSeeder extends Seeder
 
         // Create sample articles
         \App\Models\Article::factory(12)->create();
+        
+    // Seed sponsors
+    $this->call(\Database\Seeders\SponsorSeeder::class);
     }
 }
