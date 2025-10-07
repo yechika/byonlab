@@ -24,5 +24,8 @@ class DatabaseSeeder extends Seeder
 
         // Seed heroes data
         $this->call(HeroSeeder::class);
+        
+        // Seed sponsors
+        $this->call(\Database\Seeders\SponsorSeeder::class);
     }
 }
