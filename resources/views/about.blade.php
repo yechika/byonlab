@@ -108,10 +108,10 @@
                 <!-- Recruitment Section -->
                 <div class="mt-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
                     <p class="text-gray-700 dark:text-gray-300 text-center">
-                        {{ lang(
-                            'Kirimkan CV terbaru Anda ke: business@byonlab.id dengan subjek Sales_Your Name',
-                            'Send your latest CV to: business@byonlab.id with subject Sales_Your Name'
-                        ) }}
+                        {!! lang(
+                            'Kirimkan CV terbaru Anda ke: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=business@byonlab.id&su=Sales_Your%20Name" target="_blank" rel="noopener" class="font-medium hover:text-primary">business@byonlab.id</a> dengan subjek <strong>Sales_Your Name</strong>',
+                            'Send your latest CV to: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=business@byonlab.id&su=Sales_Your%20Name" target="_blank" rel="noopener" class="font-medium hover:text-primary">business@byonlab.id</a> with subject <strong>Sales_Your Name</strong>'
+                        ) !!}
                     </p>
                 </div>
             </div>
